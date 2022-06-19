@@ -15,12 +15,11 @@ public class RegistrationForm {
   private String state;
   private String zip;
   private String phone;
-  
+
   public User toUser(PasswordEncoder passwordEncoder) {
-    System.out.println(this.toString());
     return new User(
-        username, passwordEncoder.encode(password), 
-        fullname, street, city, state, zip, phone);
+            username, passwordEncoder.encode(password),
+            fullname, street, city, state, zip, phone);
   }
-  
+
 }

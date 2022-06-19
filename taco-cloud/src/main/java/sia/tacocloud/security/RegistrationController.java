@@ -10,26 +10,24 @@ import sia.tacocloud.data.UserRepository;
 @Controller
 @RequestMapping("/register")
 public class RegistrationController {
-  
+
   private UserRepository userRepo;
   private PasswordEncoder passwordEncoder;
 
   public RegistrationController(
-      UserRepository userRepo, PasswordEncoder passwordEncoder) {
+          UserRepository userRepo, PasswordEncoder passwordEncoder) {
     this.userRepo = userRepo;
     this.passwordEncoder = passwordEncoder;
   }
-  
+
   @GetMapping
   public String registerForm() {
     return "registration";
   }
-  
+
   @PostMapping
   public String processRegistration(RegistrationForm form) {
     userRepo.save(form.toUser(passwordEncoder));
-    User user = userRepo.findByUsername(form.getUsername());
-    System.out.println(user.toString() + " ---- ----");
     return "redirect:/login";
   }
 
