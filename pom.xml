@@ -11,6 +11,7 @@
     <modules>
         <module>SpringTutorial</module>
         <module>taco-cloud</module>
+        <module>ExerciseIntershipW01</module>
     </modules>
 
     <properties>
