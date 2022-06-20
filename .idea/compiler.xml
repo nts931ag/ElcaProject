@@ -2,19 +2,32 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringTutorial" />
         <module name="TacoCloud" />
+        <module name="DemoHibernate" />
+        <module name="SpringRestJsonDataBinding" />
+        <module name="SpringRestController" />
+        <module name="SpringUdemyTutorial" />
         <module name="ExerciseIntershipW01" />
+        <module name="taco-cloud" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DemoHibernate" options="-parameters" />
+      <module name="ExerciseIntershipW01" options="-parameters" />
+      <module name="SpringRestController" options="-parameters" />
+      <module name="SpringRestJsonDataBinding" options="-parameters" />
+      <module name="SpringTutorial" options="-parameters" />
+      <module name="SpringUdemyTutorial" options="-parameters" />
       <module name="TacoCloud" options="-parameters" />
+      <module name="taco-cloud" options="-parameters" />
     </option>
   </component>
 </project>
